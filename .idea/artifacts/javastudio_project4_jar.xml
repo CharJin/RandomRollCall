@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="javastudio_project4:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/javastudio_project4_jar</output-path>
+    <root id="archive" name="javastudio_project4.jar">
+      <element id="module-output" name="javastudio_project4" />
+      <element id="extracted-dir" path="E:/char_/OneDrive/Others/Projects_Libraries/poi-4.0.0/poi-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/char_/OneDrive/Others/Projects_Libraries/poi-4.0.0/poi-ooxml-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/char_/OneDrive/Others/Projects_Libraries/poi-4.0.0/poi-ooxml-schemas-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/char_/OneDrive/Others/Projects_Libraries/javafx/jfoenix-8.0.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/char_/OneDrive/Others/Projects_Libraries/javafx/TrayNotification.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/char_/OneDrive/Others/Projects_Libraries/javafx/controlsfx-8.40.14.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

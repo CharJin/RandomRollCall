@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="210.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
+    <children>
+        <Label layoutX="64.0" layoutY="106.0" text="循环次数:" textFill="#797979">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="btn_save" buttonType="RAISED" layoutX="279.0" layoutY="127.0" onAction="#saveRollCallConfig"
+                   prefHeight="17.0" prefWidth="91.0" ripplerFill="#b1b1b1"
+                   style="-fx-background-radius: 15px; -fx-background-color: #e2e2e2;" text="保存" textFill="#695c5c">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="21.0"/>
+            </font>
+        </JFXButton>
+        <JFXToggleButton fx:id="toggle_rollcallType" contentDisplay="RIGHT" ellipsisString="" layoutX="34.0"
+                         layoutY="25.0" onAction="#toggleStatusChange" prefHeight="0.0" prefWidth="132.0"
+                         selected="true" text="自动点名:  " textFill="#797979">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="13.0"/>
+            </font>
+        </JFXToggleButton>
+        <JFXButton layoutX="200.0" layoutY="38.0" onAction="#exportExcelData" prefHeight="33.0" prefWidth="145.0"
+                   text="从Ecxcel导出班级名单" underline="true">
+            <font>
+                <Font name="Microsoft YaHei Light" size="12.0"/>
+            </font>
+        </JFXButton>
+        <JFXComboBox fx:id="combobox_cycleCount" layoutX="140.0" layoutY="94.0" prefHeight="25.0" prefWidth="100.0"/>
+        <Label layoutX="64.0" layoutY="143.0" text="持续时间:" textFill="#797979">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0"/>
+            </font>
+        </Label>
+        <JFXComboBox fx:id="combobox_durationTime" layoutX="140.0" layoutY="131.0" prefHeight="25.0" prefWidth="100.0"/>
+        <JFXCheckBox fx:id="checkbox_isShowDialog" checkedColor="#009688" layoutX="8.0" layoutY="187.0" selected="true"
+                     text="显示弹窗" textFill="#797979">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0"/>
+            </font>
+        </JFXCheckBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+#btn_loadata {
+    -fx-background-color: transparent;
+    /*-fx-text-fill: red;*/
+}
+
+#btn_loadata:hover {
+    -fx-text-fill: rgba(224, 56, 41, 0.81);
+}
+
+#btn_loadata:pressed {
+    -fx-text-fill: #085bff;
+}
