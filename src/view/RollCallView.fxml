@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="840.0" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RollCallController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="840.0" prefHeight="500.0" prefWidth="880.0" stylesheets="/css/my_style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RollCallController">
 	<center>
       <BorderPane BorderPane.alignment="CENTER">
          <center>
       		<AnchorPane prefHeight="450.0" prefWidth="572.0">
       			<children>
-      				<Label fx:id="lab_stuid" alignment="CENTER" prefHeight="396.0" prefWidth="775.0" text="0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      				<Label fx:id="lab_stuid" alignment="CENTER" prefHeight="396.0" prefWidth="775.0" text="0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       					<font>
-      						<Font size="240.0" />
+      						<Font size="265.0" />
       					</font>
       				</Label>
                   <JFXButton fx:id="btn_settings1" layoutX="524.0" layoutY="43.0" onAction="#openSettingsView" style="-fx-background-radius: 25px;" visible="false" AnchorPane.bottomAnchor="386.0" AnchorPane.rightAnchor="79.0" />
@@ -30,37 +27,33 @@
                      </font>
                   </JFXButton>
                   <Button fx:id="btn_settings" layoutX="612.0" layoutY="398.0" mnemonicParsing="false" onAction="#openSettingsView" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="22.0" />
-      			</children>
-      		</AnchorPane>
-         </center>
-         <top>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="46.0" prefWidth="775.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label fx:id="lab_class" text="Here's the class name." textFill="#695c5c">
+                  <Label fx:id="lab_class" alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Here's the class name." textFill="#695c5c" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
                      <font>
                         <Font name="Microsoft YaHei Bold" size="23.0" />
                      </font>
                   </Label>
-               </children>
-               <padding>
-                  <Insets bottom="3.0" />
-               </padding>
-            </HBox>
-         </top>
+                  <Label fx:id="lab_stuname" layoutX="593.0" layoutY="24.0" text="Stu Name" textFill="#ed3b3bf5" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="24.0">
+                     <font>
+                        <Font name="Microsoft YaHei" size="14.0" />
+                     </font>
+                  </Label>
+      			</children>
+      		</AnchorPane>
+         </center>
       </BorderPane>
 	</center>
 	<right>
-		<BorderPane fx:id="borderpane_dirs" BorderPane.alignment="CENTER">
-			<center>
-				<TreeView fx:id="treeview_gradeAndClass" prefHeight="440.0" prefWidth="225.0" style="-fx-background-color: #c1c1c1;">
-               <contextMenu>
-                  <ContextMenu>
-                    <items>
-                      <MenuItem fx:id="menuitem_loadData" mnemonicParsing="false" onAction="#loadClassDataToTreeview" text="导入班级信息" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu></TreeView>
-			</center>
-		</BorderPane>
+      <BorderPane prefWidth="225.0" BorderPane.alignment="CENTER">
+         <left>
+            <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <StackPane fx:id="stack_classdata" BorderPane.alignment="CENTER">
+               <children>
+                   <Button id="btn_loadata" mnemonicParsing="false" onAction="#loadClassDataToTreeview" style="-fx-background-color: transparent;" text="点此处添加班级数据" underline="true" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
 	</right>
 </BorderPane>

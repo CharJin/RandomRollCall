@@ -16,7 +16,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/RollCallView2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/RollCallView.fxml"));
         primaryStage.setTitle(" 随机点名器 version:1.0.1");
         primaryStage.setScene(new Scene(root));
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/image/rollcall.png")));
